@@ -14,7 +14,7 @@ class Tela {
     private:
         int linhas;
         int colunas;
-        char pincel;
+        char _pincel;
         vector<vector<char>> matriz;
 
     public:
@@ -25,6 +25,19 @@ class Tela {
          * @param nc quantidade de colunas
          */
         Tela(int nl=0, int nc=0, char p=' ');
+
+        /**
+         * @brief Seta na posição desejada uma pincelada
+         * @param x coordenada x
+         * @param y coordenada y
+         */
+        void pincelar(int x, int y);
+
+        /**
+         * @brief Modifica o pincel
+         * @param p novo caractere para pintar
+         */
+        void pincel(char p);
 
         friend ostream& operator<<(ostream &os, Tela &t);
 };
