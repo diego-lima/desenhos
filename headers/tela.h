@@ -38,6 +38,10 @@ class Tela {
          * @param p novo caractere para pintar
          */
         void pincel(char p);
+        /**
+         * @brief Limpa a tela
+         */
+        void limpar();
 
         friend ostream& operator<<(ostream &os, Tela &t);
 };
