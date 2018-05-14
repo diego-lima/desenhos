@@ -20,7 +20,7 @@ Tela::Tela(int nl, int nc, char p){
 
 void Tela::pincelar(int x, int y){
     if (x < 0 || y < 0 || x > linhas || y > linhas){
-        throw "pintura fora da tela";
+        return;
     }
 
     matriz[x][y] = _pincel;
@@ -28,6 +28,14 @@ void Tela::pincelar(int x, int y){
 
 void Tela::pincel(char p){
     _pincel = p;
+}
+
+void Tela::limpar(){
+    for(int i = 0; i < linhas; i++){
+        for(int j = 0; j < colunas; j++){
+            matriz[i][j]=' ';
+        }
+    }
 }
 
 ostream& operator<<(ostream &os, Tela &t){
