@@ -8,11 +8,11 @@ SOURCES += main.cpp \
     sources/figurageometrica.cpp \
     sources/reta.cpp \
     sources/retangulo.cpp \
-    sources/leitor.cpp
+    sources/circulo.cpp
 
 HEADERS += \
     headers/tela.h \
     headers/figurageometrica.h \
     headers/reta.h \
     headers/retangulo.h \
-    headers/leitor.h
+    headers/circulo.h
