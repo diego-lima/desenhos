@@ -19,7 +19,7 @@ public:
 
   // classes que possuem funcoes virtuais
   // puras sao chamadas de classes abstratas
-  virtual void draw(Tela &t)=0;
+  virtual void draw(Tela &t, bool fillmode)=0;
 };
 
 #endif // FIGURAGEOMETRICA_H

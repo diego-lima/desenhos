@@ -16,28 +16,15 @@ class Tela {
         int colunas;
         char _pincel;
         vector<vector<char>> matriz;
-        bool _status;
 
     public:
-
-        /**
-         * @brief Construtor da classe que não recebe dimensões e não aloca matriz
-         */
-        Tela();
 
         /**
          * @brief Construtor da classe
          * @param nl quantidade de linhas
          * @param nc quantidade de colunas
          */
-        Tela(int nl, int nc, char p=' ');
-
-        /**
-         * @brief Reajusta as dimensões da tela para o formato desejado
-         * @param nl novo numero de linhas
-         * @param nc novo numero de colunas
-         */
-        void ajustar_dimensoes(int nl, int nc, char p=' ');
+        Tela(int nl=0, int nc=0, char p=' ');
 
         /**
          * @brief Seta na posição desejada uma pincelada
@@ -55,13 +42,6 @@ class Tela {
          * @brief Limpa a tela
          */
         void limpar();
-
-        /**
-         * @brief Verifica se a tela foi inicializada adequadamente, isto é, se as
-         * dimensões foram setadas corretamente
-         * @return true ou false
-         */
-        bool status(void);
 
         friend ostream& operator<<(ostream &os, Tela &t);
 };

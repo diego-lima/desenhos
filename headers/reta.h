@@ -6,9 +6,10 @@
 
 class Reta : public FiguraGeometrica
 {
+    int x_ini, x_fim, y_ini, y_fim;
 public:
     Reta(int _xi, int _yi, int _xf, int _yf);
-    void draw(Tela &t);
+    void draw(Tela &t, bool fillmode=0);
 };
 
 #endif // RETA_H
