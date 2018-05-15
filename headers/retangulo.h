@@ -9,7 +9,7 @@ class Retangulo : public FiguraGeometrica
     int x,y,altura,largura;
 public:
     Retangulo(int _xi, int _yi, int alt, int larg);
-    void draw(Tela &t);
+    void draw(Tela &t, bool fillmode=1);
 };
 
 #endif // RETANGULO_H

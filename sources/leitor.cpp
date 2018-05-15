@@ -46,7 +46,7 @@ void Leitor::despejar(Tela &tela){
                 // @= BUG
 //                sstream >> c;
 //                if(c==0) c = ' ';
-                tela.ajustar_dimensoes(x, y, '-');
+                tela.ajustar_dimensoes(y, x, '-');
             }
 
             if(!tela.status()){

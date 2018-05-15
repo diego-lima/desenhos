@@ -1,0 +1,5 @@
+dim 45 15
+brush #
+
+
+rectangle 0 0 3 5
