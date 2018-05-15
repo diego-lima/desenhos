@@ -3,6 +3,7 @@
 #include <fstream>
 #include <sstream>
 #include "headers/leitor.h"
+#include "headers/retangulo.h"
 
 using namespace std;
 
@@ -40,10 +41,11 @@ void Leitor::despejar(Tela &tela){
 
             if (token.compare("dim") == 0){
                 int x,y;
-                char p;
-                sstream >> x >> y >> p;
-                if(p==0) p = ' ';
-                tela.ajustar_dimensoes(x, y, p);
+//                char c;
+                sstream >> x >> y ;
+//                sstream >> c;
+//                if(c==0) c = ' ';
+                tela.ajustar_dimensoes(x, y, '-');
             }
 
             if(!tela.status()){
@@ -60,6 +62,15 @@ void Leitor::despejar(Tela &tela){
                 sstream >> p;
                 if(p==0 || p==3) p = ' ';
                 tela.pincel(p);
+
+            }
+
+            if (token.compare("rectangle") == 0){
+                int x,y,largura,altura;
+
+                sstream >> x >> y >> largura >> altura;
+
+                Retangulo(x,y,altura,largura).draw(tela);
 
             }
 
