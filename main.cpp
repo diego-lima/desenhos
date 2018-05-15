@@ -2,19 +2,19 @@
 #include <vector>
 #include "headers/tela.h"
 #include "headers/retangulo.h"
+#include "headers/leitor.h"
+
+#include <sstream>
+#include <string>
 using namespace std;
 
 int main()
 {
-    Tela t(10,10,'a');
-    t.pincel('-');
-    Retangulo r(1,1,5,4);
-    r.draw(t);
+    Tela tela;
+    Leitor leitor("/home/diego/projetos/desenhos/desenho.txt");
+    leitor.despejar(tela);
+    tela.pincelar(1,1);
 
-//    t.pincelar(1,1);
-    cout<<t;
-//    cout << "Hello World!" << endl;
-//    t.limpar();
-//    cout<<t;
+    cout<<tela;
     return 0;
 }

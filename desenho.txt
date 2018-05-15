@@ -1,0 +1,5 @@
+dim 5 5
+brush #
+
+rectangle 3 3 2 2
+
