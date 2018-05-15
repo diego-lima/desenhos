@@ -43,6 +43,7 @@ void Leitor::despejar(Tela &tela){
                 int x,y;
 //                char c;
                 sstream >> x >> y ;
+                // @= BUG
 //                sstream >> c;
 //                if(c==0) c = ' ';
                 tela.ajustar_dimensoes(x, y, '-');
@@ -60,6 +61,7 @@ void Leitor::despejar(Tela &tela){
                 char p;
                 sstream >> p;
                 sstream >> p;
+                // @= BUG
                 if(p==0 || p==3) p = ' ';
                 tela.pincel(p);
 

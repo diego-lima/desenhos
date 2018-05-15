@@ -39,11 +39,11 @@ void Tela::ajustar_dimensoes(int nl, int nc, char p){
 }
 
 void Tela::pincelar(int x, int y){
-    if (x < 0 || y < 0 || x > linhas || y > linhas){
+    if (x < 0 || y < 0 || x >= colunas || y >= linhas){
         return;
     }
 
-    matriz[x][y] = _pincel;
+    matriz[y][x] = _pincel;
 }
 
 void Tela::pincel(char p){
