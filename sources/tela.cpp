@@ -6,16 +6,36 @@
 
 using namespace std;
 
+Tela::Tela(){
+    _status = false;
+}
+
 Tela::Tela(int nl, int nc, char p){
     if(nc <= 0 || nl <= 0){
-        throw "dim com valor invalido";
+        _status = false;
+        return;
     }
     linhas = nl;
     colunas = nc;
 
     matriz = vector<vector<char>>(nl, vector<char>(nc, p));
 
+    _status = true;
 
+}
+
+void Tela::ajustar_dimensoes(int nl, int nc, char p){
+    if(nc <= 0 || nl <= 0){
+        cout<<"dimensoes invalidas"<<endl;
+        exit(0);
+    }
+
+    linhas = nl;
+    colunas = nc;
+
+    matriz = vector<vector<char>>(nl, vector<char>(nc, p));
+
+    _status = true;
 }
 
 void Tela::pincelar(int x, int y){
@@ -36,6 +56,10 @@ void Tela::limpar(){
             matriz[i][j]=' ';
         }
     }
+}
+
+bool Tela::status(void){
+    return _status;
 }
 
 ostream& operator<<(ostream &os, Tela &t){
