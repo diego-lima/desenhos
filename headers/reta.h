@@ -14,7 +14,6 @@ public:
      * @param _yi coordenada y do ponto inicial
      * @param _xf coordenada x do ponto final
      * @param _yf coordenada y do ponto final
-     * @param fillmode se é pra preencer (1) ou nao
      */
     Reta(int _xi, int _yi, int _xf, int _yf);
     /**
