@@ -62,6 +62,7 @@ class Tela {
          * @return true ou false
          */
         bool status(void);
+        void escrever_arquivo();
 
         friend ostream& operator<<(ostream &os, Tela &t);
 };
