@@ -62,6 +62,19 @@ bool Tela::status(void){
     return _status;
 }
 
+void Tela::escrever_arquivo(){
+    ofstream myfile;
+    myfile.open ("D:\\Meus Downloads\\desenhos-master (1)\\desenhos-master\\arquivo.txt");
+    myfile << "Writing this to a file.\n";
+    for(int i = 0; i < linhas; i++){
+        for(int j = 0; j < colunas; j++){
+            myfile<<matriz[i][j]<<" ";
+        }
+        myfile<<"\n";
+    }
+    myfile.close();
+}
+
 ostream& operator<<(ostream &os, Tela &t){
     for(int i = 0; i < t.linhas; i++){
         for(int j = 0; j < t.colunas; j++){
