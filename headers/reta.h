@@ -17,6 +17,11 @@ public:
      * @param fillmode se é pra preencer (1) ou nao
      */
     Reta(int _xi, int _yi, int _xf, int _yf);
+    /**
+     * @brief desenha na tela
+     * @param t tela a ser desenhada
+     * @param fillmode se é pra preencer (1) ou nao
+     */
     void draw(Tela &t, bool fillmode=0);
 };
 
