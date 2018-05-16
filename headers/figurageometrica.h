@@ -7,18 +7,9 @@ class FiguraGeometrica
 {
 public:
   FiguraGeometrica();
-  // metodos virtuais forcam que os
-  // ponteiros para a classe base
-  // executem metodos da classe derivada
-  // quando apontarem para objetos dessa
-  // classe derivada
-
-  // funcao virtual pura forca que os
-  // descendentes CRIEM suas versoes
-  // do metodo draw
-
-  // classes que possuem funcoes virtuais
-  // puras sao chamadas de classes abstratas
+  /**
+   * @brief O metodo draw será implementado pelas classes filhas
+   */
   virtual void draw(Tela &t, bool fillmode)=0;
 };
 
