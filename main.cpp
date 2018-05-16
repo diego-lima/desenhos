@@ -12,15 +12,22 @@ using namespace std;
 
 int main()
 {
-//    Tela tela(10, 40);
     Tela tela;
-    Leitor leitor("D:\\Meus Downloads\\desenhos-master (1)\\desenhos-master\\figuras.txt");
+
+    // Verifica se o arquivo está tudo em ordem
+    Leitor leitor("/home/diego/projetos/desenhos/figuras.txt");
+    // Interpreta o texto dentro do arquivo e modifica a tela, criando
+    // figuras
     leitor.despejar(tela);
 
-    Retangulo(0,4,1,1).draw(tela);
+    // Seta um pixel
+    tela.pincelar(8,7);
+
+    // Cria um retangulo
+    Retangulo(0,4,2,2).draw(tela);
 
 
     cout<<tela;
-    tela.escrever_arquivo();
+    tela.escrever_arquivo("/home/diego/projetos/desenhos/arquivo.txt");
     return 0;
 }

@@ -62,25 +62,19 @@ bool Tela::status(void){
     return _status;
 }
 
-void Tela::escrever_arquivo(){
+void Tela::escrever_arquivo(char* caminho){
     ofstream myfile;
-    myfile.open ("D:\\Meus Downloads\\desenhos-master (1)\\desenhos-master\\arquivo.txt");
-    myfile << "Writing this to a file.\n";
-    for(int i = 0; i < linhas; i++){
-        for(int j = 0; j < colunas; j++){
-            myfile<<matriz[i][j]<<" ";
-        }
-        myfile<<"\n";
-    }
+    myfile.open(caminho);
+    myfile << *this << endl;
     myfile.close();
 }
 
 ostream& operator<<(ostream &os, Tela &t){
     for(int i = 0; i < t.linhas; i++){
         for(int j = 0; j < t.colunas; j++){
-            cout<<t.matriz[i][j]<<" ";
+            os<<t.matriz[i][j]<<" ";
         }
-        cout<<endl;
+        os<<endl;
     }
 
     return os;

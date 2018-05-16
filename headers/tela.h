@@ -62,7 +62,7 @@ class Tela {
          * @return true ou false
          */
         bool status(void);
-        void escrever_arquivo();
+        void escrever_arquivo(char* caminho);
 
         friend ostream& operator<<(ostream &os, Tela &t);
 };
