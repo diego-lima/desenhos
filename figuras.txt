@@ -1,4 +1,4 @@
-dim 15 35
+dim 15 45
 brush #
 
 line 0 0 10 10
