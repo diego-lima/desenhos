@@ -3,7 +3,10 @@
 #include <fstream>
 #include <sstream>
 #include "headers/leitor.h"
+#include "headers/reta.h"
 #include "headers/retangulo.h"
+#include "headers/circulo.h"
+
 
 using namespace std;
 
@@ -46,7 +49,7 @@ void Leitor::despejar(Tela &tela){
                 // @= BUG
 //                sstream >> c;
 //                if(c==0) c = ' ';
-                tela.ajustar_dimensoes(y, x, '-');
+                tela.ajustar_dimensoes(x, y, '-');
             }
 
             if(!tela.status()){
@@ -67,12 +70,31 @@ void Leitor::despejar(Tela &tela){
 
             }
 
+            if (token.compare("line") == 0){
+                int xi, yi;
+                int xf, yf;
+
+                sstream >> xi >> yi >> xf>> yf;
+
+                Reta(xi,yi,xf,yf).draw(tela);
+
+            }
+
             if (token.compare("rectangle") == 0){
                 int x,y,largura,altura;
 
                 sstream >> x >> y >> largura >> altura;
 
                 Retangulo(x,y,altura,largura).draw(tela);
+
+            }
+
+            if (token.compare("circle") == 0){
+                int x,y,r;
+
+                sstream >> x >> y >> r;
+
+                Circulo(x,y,r).draw(tela);
 
             }
 

@@ -1,5 +1,5 @@
-dim 45 15
+dim 15 45
 brush #
 
-
-rectangle 0 0 3 5
+line 0 0 10 10
+circle 15 5 4

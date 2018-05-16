@@ -7,17 +7,18 @@
 #include <sstream>
 #include <string>
 #include "headers/circulo.h"
+#include "headers/reta.h"
 using namespace std;
 
 int main()
 {
+//    Tela tela(10, 40);
     Tela tela;
     Leitor leitor("/home/diego/projetos/desenhos/figuras.txt");
     leitor.despejar(tela);
-    tela.pincelar(1,1);
 
-    Circulo r(15,5,6);
-    r.draw(tela,1);
+    Retangulo(0,4,1,1).draw(tela);
+
 
     cout<<tela;
     return 0;
